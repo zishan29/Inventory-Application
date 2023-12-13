@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  div.container 
+    each val in jeans
+      div.card
+        img(src= val.imageURL).item-img
+        p #{val.name}
+        p #{val.description}
+        p= val.price
+    each val in shirts 
+      div.card
+        img(src= val.imageURL).item-img
+        p #{val.name}
+        p #{val.description}
+        p= val.price
+    each val in shoes
+      div.card
+        img(src= val.imageURL).item-img
+        p #{val.name}
+        p #{val.description}
+        p= val.price
+    each val in sweatshirts 
+      div.card
+        img(src= val.imageURL).item-img
+        p #{val.name}
+        p #{val.description}
+        p= val.price
+    each val in trousers 
+      div.card
+        img(src= val.imageURL).item-img
+        p #{val.name}
+        p #{val.description}
+        p= val.price
+    each val in tshirts
+      div.card
+        img(src= val.imageURL).item-img
+        p #{val.name}
+        p #{val.description}
+        p= val.price
