@@ -1,0 +1,22 @@
+extends layout 
+
+block content
+    div.detail-container 
+        span.detail-card 
+            img(src= shirt.imageURL).detail-item-img
+            div.detail-info
+                p.detail-name #{shirt.name}
+                p.detail-tax MRP inclusive of all taxes
+                p.detail-price= shirt.price
+                .size-selector 
+                    each val in shirt.sizes 
+                        button(onclick=`selectSize('${val}')`).size-button=  val
+                button.add-to-bag Add to Bag
+                div.product-description-fit
+                    div.product-description-fit-title Description & fit
+                    div.product-description= shirt.description
+                    div.product-fit
+                    each val in shirt.fit
+                        p.fit= val
+    
+    

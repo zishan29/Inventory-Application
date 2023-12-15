@@ -1,0 +1,22 @@
+extends layout 
+
+block content
+    div.detail-container 
+        span.detail-card 
+            img(src= trouser.imageURL).detail-item-img
+            div.detail-info
+                p.detail-name #{trouser.name}
+                p.detail-tax MRP inclusive of all taxes
+                p.detail-price= trouser.price
+                .size-selector 
+                    each val in trouser.sizes 
+                        button(onclick=`selectSize('${val}')`).size-button=  val
+                button.add-to-bag Add to Bag
+                div.product-description-fit
+                    div.product-description-fit-title Description & fit
+                    div.product-description= trouser.description
+                    div.product-fit
+                    each val in trouser.fit
+                        p.fit= val
+    
+    

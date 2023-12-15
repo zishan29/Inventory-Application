@@ -18,8 +18,6 @@ exports.index = asyncHandler(async (req, res, next) => {
       TShirt.find().exec(),
     ]);
 
-  console.log(jeans, shirts, shoes, sweatshirts, trousers, tshirts);
-
   res.render('index', {
     jeans,
     shirts,

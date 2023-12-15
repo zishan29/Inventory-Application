@@ -5,3 +5,23 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     block content
+    nav 
+      a(href= '/') Home
+      a(href= '/shirts') Shirts
+      a(href= '/jeans') Jeans
+      a(href= '/trousers') Trousers
+      a(href= '/t-shirts') TShirts
+      a(href= '/sweatshirts') Sweatshirts 
+      a(href= '/shoes') Shoes
+    
+    script.
+        function selectSize(selectedSize) {
+            const buttons = document.querySelectorAll('.size-button');
+            buttons.forEach(button => {
+                if (button.textContent === selectedSize) {
+                    button.classList.add('selected');
+                } else {
+                    button.classList.remove('selected');
+                }
+            });
+        }

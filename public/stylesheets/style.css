@@ -1,21 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+@import url('https://db.onlinewebfonts.com/c/70f3e46b3bb904260d1b1a6e0f2edf08?family=HM+Sans+Regular');
+
+:root {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  padding: 50px;
-  font:
-    14px 'Lucida Grande',
-    Helvetica,
-    Arial,
-    sans-serif;
+  font-family: 'HM Sans Regular', 'Roboto', sans-serif;
 }
 
 a {
-  color: #00b7ff;
+  color: black;
+  text-decoration: none;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  justify-items: center;
+  gap: 4px;
+  margin: 20px;
+  margin-top: 100px;
+}
+
+.card {
+  display: grid;
+  padding-bottom: 23px;
+}
+
+.name,
+.price {
+  font-size: 13px;
+}
+
+p {
+  margin: 0;
+}
+
+p.description {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-wrap: nowrap;
 }
 
 .item-img {
-  width: 500px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  box-shadow: 0px 0px 10px rgb(230, 230, 230);
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+nav > a {
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+}
+
+.detail-container {
+  margin: 50px;
+  margin-top: 100px;
+}
+
+.detail-card {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 30px;
+  width: 1230px;
+}
+
+.detail-item-img {
+  width: 600px;
+  height: auto;
+  overflow: hidden;
+}
+
+.detail-name {
+  font-size: 17px;
+  font-weight: 550;
+  line-height: 35px;
+}
+
+.detail-price {
+  font-size: 21px;
+}
+
+.detail-tax {
+  color: gray;
+  font-size: 13px;
+}
+
+.size-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  padding: 20px 0;
+}
+
+.size-button {
+  padding: 12px 32px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.size-button.selected {
+  background-color: #000000;
+  color: #ffff;
+}
+
+.detail-info {
+  display: grid;
+  grid-auto-rows: max-content;
+}
+
+.add-to-bag {
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 18px 24px;
+  width: 300px;
+  cursor: pointer;
+  margin: 15px 0;
+}
+
+.product-description-fit-title {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+.product-fit {
+  padding-top: 30px;
+}
+
+.fit {
+  font-size: 13px;
+  line-height: 25px;
 }

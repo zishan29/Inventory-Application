@@ -1,0 +1,22 @@
+extends layout 
+
+block content
+    div.detail-container 
+        span.detail-card 
+            img(src= sweatshirt.imageURL).detail-item-img
+            div.detail-info
+                p.detail-name #{sweatshirt.name}
+                p.detail-tax MRP inclusive of all taxes
+                p.detail-price= sweatshirt.price
+                .size-selector 
+                    each val in sweatshirt.sizes 
+                        button(onclick=`selectSize('${val}')`).size-button=  val
+                button.add-to-bag Add to Bag
+                div.product-description-fit
+                    div.product-description-fit-title Description & fit
+                    div.product-description= sweatshirt.description
+                    div.product-fit
+                    each val in sweatshirt.fit
+                        p.fit= val
+    
+    
