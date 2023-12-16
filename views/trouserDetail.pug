@@ -6,6 +6,10 @@ block content
             img(src= trouser.imageURL).detail-item-img
             div.detail-info
                 p.detail-name #{trouser.name}
+                    a(href= trouser.url + "/edit").edit-link
+                        img(src="/images/pencil.svg", alt="").edit-img
+                    a(href= trouser.url + "/delete").delete-link 
+                        img(src="/images/delete.svg", alt="").delete-img
                 p.detail-tax MRP inclusive of all taxes
                 p.detail-price= trouser.price
                 .size-selector 

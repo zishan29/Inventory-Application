@@ -5,14 +5,16 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     block content
+    a(href='/').brand-name HeThreads
     nav 
-      a(href= '/') Home
-      a(href= '/shirts') Shirts
-      a(href= '/jeans') Jeans
-      a(href= '/trousers') Trousers
-      a(href= '/t-shirts') TShirts
-      a(href= '/sweatshirts') Sweatshirts 
-      a(href= '/shoes') Shoes
+      span.nav-bar
+        a(href= '/shirts') Shirts
+        a(href= '/jeans') Jeans
+        a(href= '/trousers') Trousers
+        a(href= '/t-shirts') TShirts
+        a(href= '/sweatshirts') Sweatshirts 
+        a(href= '/shoes') Shoes
+        a(href= '/add') Add items
     
     script.
         function selectSize(selectedSize) {

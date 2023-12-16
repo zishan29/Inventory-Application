@@ -1,0 +1,8 @@
+extends layout 
+
+block content
+    form(method='POST' action='').delete-form
+        label= `Do you really want to delete ${tshirt.name}?`
+        div.form-group
+            input#id.form-control(type='hidden',name='id', required='true', value=tshirt._id )
+        button.btn.btn-primary(type='submit') Delete

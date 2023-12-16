@@ -12,7 +12,7 @@ const TShirtSchema = new Schema({
 });
 
 TShirtSchema.virtual('url').get(function () {
-  return `/t-shirts/${this.name}/${this.description}/${this._id}`;
+  return `/t-shirts/${this.name}/${this._id}`;
 });
 
 module.exports = mongoose.model('TShirt', TShirtSchema);

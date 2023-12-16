@@ -1,40 +1,29 @@
 extends layout
 
 block content
-  div.container 
-    each val in jeans
-      a(href= val.url) 
-        span.card 
-            img(src= val.imageURL, loading="lazy").item-img
-            p.name #{val.name}
-            p.price= val.price
-    each val in shirts 
-      a(href= val.url) 
-        span.card 
-            img(src= val.imageURL, loading="lazy").item-img
-            p.name #{val.name}
-            p.price= val.price
-    each val in shoes
-      a(href= val.url) 
-        span.card 
-            img(src= val.imageURL, loading="lazy").item-img
-            p.name #{val.name}
-            p.price= val.price
-    each val in sweatshirts 
-      a(href= val.url) 
-        span.card 
-            img(src= val.imageURL, loading="lazy").item-img
-            p.name #{val.name}
-            p.price= val.price
-    each val in trousers 
-      a(href= val.url) 
-        span.card 
-            img(src= val.imageURL, loading="lazy").item-img
-            p.name #{val.name}
-            p.price= val.price
-    each val in tshirts
-      a(href= val.url) 
-        span.card 
-            img(src= val.imageURL, loading="lazy").item-img
-            p.name #{val.name}
-            p.price= val.price
+  .index-header 
+    span Estimated delivery time: 2-7 days 
+    span Members get free shipping above Rs.1999
+    span Free & flexible 15 days return
+  div.index-container 
+    div.index-title1 Explore our last chance selection!
+    div.index-title2 Don't miss out on the top trends. Sizes running out soon.
+    .index-buttons  
+      <form action="/shirts">
+        <input type="submit" value="Shirts" />
+      </form>
+      <form action="/jeans">
+        <input type="submit" value="Jeans" />
+      </form>
+      <form action="/trousers">
+        <input type="submit" value="Trousers" />
+      </form>
+      <form action="/t-shirts">
+        <input type="submit" value="TShirts" />
+      </form>
+      <form action="/sweatshirts">
+        <input type="submit" value="Sweatshirts" />
+      </form>
+      <form action="/shoes">
+        <input type="submit" value="Shoes" />
+      </form>

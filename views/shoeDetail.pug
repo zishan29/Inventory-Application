@@ -6,6 +6,10 @@ block content
             img(src= shoe.imageURL).detail-item-img
             div.detail-info
                 p.detail-name #{shoe.name}
+                    a(href= shoe.url + "/edit").edit-link
+                        img(src="/images/pencil.svg", alt="").edit-img
+                    a(href= shoe.url + "/delete").delete-link 
+                        img(src="/images/delete.svg", alt="").delete-img
                 p.detail-tax MRP inclusive of all taxes
                 p.detail-price= shoe.price
                 .size-selector 

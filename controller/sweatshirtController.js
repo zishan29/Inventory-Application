@@ -11,3 +11,13 @@ exports.sweatshirtDetail = asyncHandler(async (req, res, next) => {
   const sweatshirt = await Sweatshirt.findById(req.params.id).exec();
   res.render('sweatshirtDetail', { sweatshirt });
 });
+
+exports.sweatshirtDeleteGet = asyncHandler(async (req, res, next) => {
+  const sweatshirt = await Sweatshirt.findById(req.params.id);
+  res.render('sweatshirtDelete', { sweatshirt });
+});
+
+exports.sweatshirtDeletePost = asyncHandler(async (req, res, next) => {
+  await Sweatshirt.findByIdAndDelete(req.params.id);
+  res.redirect('/sweatshirts');
+});

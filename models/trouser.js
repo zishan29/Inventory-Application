@@ -12,7 +12,7 @@ const TrouserSchema = new Schema({
 });
 
 TrouserSchema.virtual('url').get(function () {
-  return `/trousers/${this.name}/${this.description}/${this._id}`;
+  return `/trousers/${this.name}/${this._id}`;
 });
 
 module.exports = mongoose.model('Trouser', TrouserSchema);

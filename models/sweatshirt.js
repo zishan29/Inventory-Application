@@ -12,7 +12,7 @@ const SweatshirtSchema = new Schema({
 });
 
 SweatshirtSchema.virtual('url').get(function () {
-  return `/sweatshirts/${this.name}/${this.description}/${this._id}`;
+  return `/sweatshirts/${this.name}/${this._id}`;
 });
 
 module.exports = mongoose.model('Sweatshirt', SweatshirtSchema);

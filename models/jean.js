@@ -12,7 +12,7 @@ const JeanSchema = new Schema({
 });
 
 JeanSchema.virtual('url').get(function () {
-  return `/jeans/${this.name}/${this.description}/${this._id}`;
+  return `/jeans/${this.name}/${this._id}`;
 });
 
 module.exports = mongoose.model('Jean', JeanSchema);

@@ -1,0 +1,27 @@
+extends layout 
+
+block content 
+    form(action="", method='POST').add-form
+        label(for="category") Categories*
+        select(name="category", id='category') 
+            option(value="Shirt") Shirts 
+            option(value="Jean") Jeans 
+            option(value='TShirt') TShirts 
+            option(value="Sweatshirt") Sweatshirts 
+            option(value="Trouser") Trousers 
+            option(value="Shoe") Shoes
+        label(for="name") Name*
+        input(type="text", name='name', id='name')
+        label(for="price") Price* 
+        input(type="text", name='price', id='price', placeholder='for e.g. Rs. 799.0 or $ 25')
+        label(for="sizes") Sizes* 
+        input(type="text", name='sizes', id='sizes', placeholder='values separated by , for e.g. S, M, L')
+        label(for="description") Description*
+        textarea(name="description", cols="80", rows="10")
+        label(for="fit") fit*
+        textarea(name="fit", cols="80", rows="10")
+        input(type="submit", value="Submit")
+    if errors
+        ul.errors
+            for error in errors
+                li!= error.msg
