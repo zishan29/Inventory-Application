@@ -20,6 +20,8 @@ block content
         textarea(name="description", cols="80", rows="8")
         label(for="fit") Fit*
         textarea(name="fit", cols="80", rows="8")
+        label Confirm you are an admin to add item*
+        input(type='text', name='adminPassword', placeholder='Admin Password')
         input(type="submit", value="Submit")
     if errors
         ul.errors
