@@ -1,0 +1,21 @@
+extends layout 
+
+block content 
+    form(action="", method='POST').edit-form
+        label(for="name") Name*
+        input(type="text", name='name', id='name' value=(undefined===item ? '' : item.name) )
+        label(for="price") Price* 
+        input(type="text", name='price', id='price', placeholder='for e.g. Rs. 799.0 or $ 25' value=(undefined===item ? '' : item.price))
+        label(for="sizes") Sizes* 
+        input(type="text", name='sizes', id='sizes', placeholder='values separated by , for e.g. S, M, L' value=(undefined===item ? '' : item.sizes.toString()))
+        label(for="description") Description*
+        textarea(name="description", cols="80", rows="8", placeholder='Description of the product') #{item.description}
+        label(for="fit") Fit*
+        textarea(name="fit", cols="80", rows="8", placeholder='fit of the product') #{item.fit}
+        label Confirm you are an admin to edit*
+        input(type='text', name='adminPassword', placeholder='Admin Password')
+        input(type="submit", value="Submit") 
+    if errors
+        ul.errors
+            for error in errors
+                li!= error.msg

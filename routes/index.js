@@ -20,9 +20,9 @@ router.get('/shirts/:name/:id/delete', shirtController.shirtDeleteGet);
 
 router.post('/shirts/:name/:id/delete', shirtController.shirtDeletePost);
 
-// router.get('/shirts/:name/:id/edit', shirtController.shirtEdit);
+router.get('/shirts/:name/:id/edit', shirtController.shirtEditGet);
 
-// router.post('/shirts/:name/:id/edit', shirtController.shirtEdit);
+router.post('/shirts/:name/:id/edit', shirtController.shirtEditPost);
 
 router.get('/jeans', jeanController.jeansList);
 
@@ -32,9 +32,9 @@ router.get('/jeans/:name/:id/delete', jeanController.jeanDeleteGet);
 
 router.post('/jeans/:name/:id/delete', jeanController.jeanDeletePost);
 
-// router.get('/jeans/:name/:id/edit', jeanController.jeanEdit);
+router.get('/jeans/:name/:id/edit', jeanController.jeanEditGet);
 
-// router.post('/jeans/:name/:id/edit', jeanController.jeanEdit);
+router.post('/jeans/:name/:id/edit', jeanController.jeanEditPost);
 
 router.get('/shoes', shoeController.shoesList);
 
@@ -44,9 +44,9 @@ router.get('/shoes/:name/:id/delete', shoeController.shoeDeleteGet);
 
 router.post('/shoes/:name/:id/delete', shoeController.shoeDeletePost);
 
-// router.get('/shoes/:name/:id/edit', shoeController.shoeEdit);
+router.get('/shoes/:name/:id/edit', shoeController.shoeEditGet);
 
-// router.post('/shoes/:name/:id/edit', shoeController.shoeEdit);
+router.post('/shoes/:name/:id/edit', shoeController.shoeEditPost);
 
 router.get('/sweatshirts', sweatshirtController.sweatshirtsList);
 
@@ -62,9 +62,15 @@ router.post(
   sweatshirtController.sweatshirtDeletePost,
 );
 
-// router.get('/sweatshirts/:name/:id/edit', sweatshirtController.sweatshirtEdit);
+router.get(
+  '/sweatshirts/:name/:id/edit',
+  sweatshirtController.sweatshirtEditGet,
+);
 
-// router.post('/sweatshirts/:name/:id/edit', sweatshirtController.sweatshirtEdit);
+router.post(
+  '/sweatshirts/:name/:id/edit',
+  sweatshirtController.sweatshirtEditPost,
+);
 
 router.get('/trousers', trouserController.trousersList);
 
@@ -74,9 +80,9 @@ router.get('/trousers/:name/:id/delete', trouserController.trouserDeleteGet);
 
 router.post('/trousers/:name/:id/delete', trouserController.trouserDeletePost);
 
-// router.get('/trousers/:name/:id/edit', trouserController.trouserEditGet);
+router.get('/trousers/:name/:id/edit', trouserController.trouserEditGet);
 
-// router.post('/trousers/:name/:id/edit', trouserController.trouserEditPost);
+router.post('/trousers/:name/:id/edit', trouserController.trouserEditPost);
 
 router.get('/t-shirts', tshirtController.tshirtsList);
 
@@ -86,9 +92,9 @@ router.get('/t-shirts/:name/:id/delete', tshirtController.tshirtDeleteGet);
 
 router.post('/t-shirts/:name/:id/delete', tshirtController.tshirtDeletePost);
 
-// router.get('/t-shirts/:name/:id/edit', tshirtController.tshirtEdit);
+router.get('/t-shirts/:name/:id/edit', tshirtController.tshirtEditGet);
 
-// router.post('/t-shirts/:name/:id/edit', tshirtController.tshirtEdit);
+router.post('/t-shirts/:name/:id/edit', tshirtController.tshirtEditPost);
 
 router.get('/add', indexController.addItemGet);
 

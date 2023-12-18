@@ -3,24 +3,24 @@ extends layout
 block content
     div.detail-container 
         span.detail-card 
-            img(src= shirt.imageURL).detail-item-img
+            img(src= item.imageURL).detail-item-img
             div.detail-info
-                p.detail-name #{shirt.name}
-                    a(href= shirt.url + "/edit").edit-link
+                p.detail-name #{item.name}
+                    a(href= item.url + "/edit").edit-link
                         img(src="/images/pencil.svg", alt="").edit-img
-                    a(href= shirt.url + "/delete").delete-link 
+                    a(href= item.url + "/delete").delete-link 
                         img(src="/images/delete.svg", alt="").delete-img
                 p.detail-tax MRP inclusive of all taxes
-                p.detail-price= shirt.price
+                p.detail-price= item.price
                 .size-selector 
-                    each val in shirt.sizes 
+                    each val in item.sizes 
                         button(onclick=`selectSize('${val}')`).size-button=  val
                 button.add-to-bag Add to Bag
                 div.product-description-fit
                     div.product-description-fit-title Description & fit
-                    div.product-description= shirt.description
+                    div.product-description= item.description
                     div.product-fit
-                    each val in shirt.fit
+                    each val in item.fit
                         p.fit= val
     
     

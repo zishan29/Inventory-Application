@@ -237,7 +237,9 @@ nav {
 }
 
 .add-form,
-.delete-form {
+.confirm-form,
+.edit-form,
+.unauthorized {
   display: grid;
   justify-content: center;
   margin-top: 185px;
@@ -278,4 +280,50 @@ label {
 
 .delete-container {
   margin-top: 185px;
+}
+
+textarea {
+  resize: none;
+  border-radius: 0%;
+  border: 1px solid black;
+}
+
+select {
+  height: 40px;
+  font-size: 15px;
+  padding: 3px;
+  border-radius: 0%;
+  background-color: white;
+  border: 1px solid black;
+}
+
+input {
+  height: 40px;
+  font-size: 15px;
+  padding: 0 6px;
+  border-radius: 0%;
+  border: 1px solid black;
+}
+
+label {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+input[type='submit'] {
+  background-color: black;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  height: 45px;
+  font-weight: bold;
+}
+
+input[type='submit']:hover {
+  box-shadow: 0 0 2px black;
+}
+
+input[type='submit']:active {
+  background-color: white;
+  color: black;
 }

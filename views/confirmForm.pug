@@ -1,0 +1,7 @@
+extends layout 
+
+block content 
+    form(action='', method='POST').confirm-form
+        label Confirm you are an admin*
+        input(type='text', name='adminPassword', placeholder='Admin Password')
+        input(type="submit", value="Submit")
